@@ -1,0 +1,114 @@
+body {
+  font: 14px Consolas, monospace;
+  margin: 20px;
+  background: #3d3d3d;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+.gameBoard {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.board-row {
+  display: flex;
+  flex-direction: row;
+}
+.gameBoard:after {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 3px;
+  background-color: red;
+  border-radius: 3px;
+  z-index: 100;
+  border: 1px solid orange;
+  opacity: 0;
+}
+
+.gameBoard1:after {
+  opacity: 1;
+  top: 13px;
+}
+
+.gameBoard2:after {
+  overflow: 1px;
+}
+
+.gameBoard3:after {
+  opacity: 1;
+  bottom: 13px;
+}
+
+.gameBoard4:after {
+  opacity: 1;
+  height: 90%;
+  width: 3px;
+  left: 13px;
+}
+
+.gameBoard5:after {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+.gameBoard6:after {
+  opacity: 1;
+  right: 13px;
+  height: 90%;
+  width: 3px;
+}
+
+.gameBoard7:after {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+.gameBoard8:after {
+  opacity: 1;
+  transform: rotate(-45deg);
+}
+
+.status {
+  margin-bottom: 10px;
+  color: orange;
+}
+
+.square {
+  background: transparent;
+  border: 1px solid orange;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  color: orange;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
